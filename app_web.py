@@ -14,7 +14,7 @@ st.set_page_config(
 # Load model
 @st.cache_resource
 def load_model():
-    model_path = Path(__file__).parent / "model (2).pkl"
+    model_path = Path(__file__).parent / "model.pkl"
     return joblib.load(model_path)
 
 model = load_model()
