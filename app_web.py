@@ -36,7 +36,7 @@ with col2:
     aloqa_soni = st.number_input("Aloqa soni (12 oy)", 0, 100, 0)
     kredit_limiti = st.number_input("Kredit limiti", 0.0, 100000.0, 5000.0)
     kredit_balansi = st.number_input("Kredit balansi", 0.0, 100000.0, 0.0)
-    mavjud_kredit_qismi = st.number_input("Kredit ulushi (%)", 0.0, 100000.0, 0.0)
+    mavjud_kredit_qismi = st.number_input("Kredit ulushi", 0.0, 100000.0, 0.0)
     total_trans_amt = st.number_input("Tranzaksiya summasi", 0.0, 1000000.0, 1000.0)
 
 st.markdown("---")
@@ -71,7 +71,7 @@ if st.button("🔮 Bashorat qilish"):
         result = model.predict(df)[0]
 
         # Natijani chiroyli chiqarish
-        st.success(f"📊 Kredit foydalanish darajasi: {result:.4f}")
+        st.success(f"📊 Xizmatdan foydalanish darajasi: {result:.4f}")
 
         # Agar foiz sifatida ko‘rsatmoqchi bo‘lsang:
         st.info(f"📈 Foizda: {result * 100:.2f}%")
